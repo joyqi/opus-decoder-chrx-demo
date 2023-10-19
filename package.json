@@ -10,6 +10,8 @@
     "test": "plasmo test"
   },
   "dependencies": {
+    "ogg-opus-decoder": "^1.6.7",
+    "opus-decoder": "^0.7.2",
     "plasmo": "0.83.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"

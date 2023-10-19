@@ -5,6 +5,12 @@ settings:
   excludeLinksFromLockfile: false
 
 dependencies:
+  ogg-opus-decoder:
+    specifier: ^1.6.7
+    version: 1.6.7
+  opus-decoder:
+    specifier: ^0.7.2
+    version: 0.7.2
   plasmo:
     specifier: 0.83.0
     version: 0.83.0(react-dom@18.2.0)(react@18.2.0)
@@ -421,6 +427,10 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  /@eshaz/web-worker@1.2.1:
+    resolution: {integrity: sha512-v5AKAVtM0toVD2rDCGjzhySWlXG/sG5HVialdzrxFKTAnFZNCjQelX0n2tPK0tE86jf4s3hpWlpRtOh8OObktg==}
+    dev: false
 
   /@expo/spawn-async@1.7.2:
     resolution: {integrity: sha512-QdWi16+CHB9JYP7gma19OVVg0BFkvU8zNj9GjWorYI8Iv8FUxjOCcYRuAmX4s/h91e4e7BPsskc8cSrZYho9Ew==}
@@ -2544,6 +2554,12 @@ packages:
     resolution: {integrity: sha512-7OjdcV8vQ74eiz1TZLzZP4JwqM5fA94K6yntPS5Z25r9HDuGNzaGdgvwKYq6S+MxwF0TFRwe50fIR/MYnakdkQ==}
     dev: false
 
+  /@wasm-audio-decoders/common@9.0.1:
+    resolution: {integrity: sha512-s4KxPsxhD6e+EtjmHPzTmKJSJTEXHGYlBzUGGLN/plV01x3RecybW73nIMtdLLXL8k/zQ8HYFcA6d9lqCJcDjQ==}
+    dependencies:
+      '@eshaz/web-worker': 1.2.1
+    dev: false
+
   /abortcontroller-polyfill@1.7.5:
     resolution: {integrity: sha512-JMJ5soJWP18htbbxJjG7bG6yuI6pRhgJ0scHHTfkUjf6wjP912xZWvM+A4sJK3gqd9E8fcPbDnOefbA9Th/FIQ==}
     dev: false
@@ -2869,6 +2885,10 @@ packages:
       acorn: 8.10.0
       estree-walker: 3.0.3
       periscopic: 3.1.0
+    dev: false
+
+  /codec-parser@2.4.3:
+    resolution: {integrity: sha512-3dAvFtdpxn4YLstqsB2ZiJXXNg7n1j7R5ONeDuk+2kBkb39PwrCRytOFHlSWA8q5jCjW3PumeMv9q37bFHsijg==}
     dev: false
 
   /color-convert@1.9.3:
@@ -4355,6 +4375,14 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
+  /ogg-opus-decoder@1.6.7:
+    resolution: {integrity: sha512-Jzec9s2572JljRfVAWbHCm5YIIa1Z2CUvhwudK9Qh1UUNuKpuDxhaqNTL8lO4leXl1GnM0/Vok6gCicZ6fh0XA==}
+    dependencies:
+      '@wasm-audio-decoders/common': 9.0.1
+      codec-parser: 2.4.3
+      opus-decoder: 0.7.2
+    dev: false
+
   /once@1.4.0:
     resolution: {integrity: sha512-lNaJgI+2Q5URQBkccEKHTQOPaXdUxnZZElQTZY0MFUAuaEqe1E+Nyvgdz/aIyNi6Z9MzO5dv1H8n58/GELp3+w==}
     dependencies:
@@ -4366,6 +4394,12 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       mimic-fn: 2.1.0
+    dev: false
+
+  /opus-decoder@0.7.2:
+    resolution: {integrity: sha512-d0gDTCeZfMStYDRyDhfcSq3RxF0znA78P7AsJwaEdM/UjWbGfvdiE0+azTE8+4kTC4B+lenFb1js4NoOxscb5g==}
+    dependencies:
+      '@wasm-audio-decoders/common': 9.0.1
     dev: false
 
   /ora@5.4.1:
